@@ -2,10 +2,18 @@ server:
     port: 8081
     
 spring:
-    application:
-        name: bootcamp-priceservice
-    config:
-        import: configserver:http://localhost:8888
+  application:
+      name: bootcamp-priceservice
+  config:
+      import: configserver:http://localhost:8888 
+  jpa:
+    hibernate:
+      ddl-auto: none
+    defer-datasource-initialization: true
+  sql:
+    init:
+      mode: always
+   
     
    
     
