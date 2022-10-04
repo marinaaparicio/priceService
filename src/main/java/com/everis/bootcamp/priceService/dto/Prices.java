@@ -1,15 +1,28 @@
-package com.everis.bootcamp.priceService;
+package com.everis.bootcamp.priceService.dto;
 
 import java.math.BigDecimal;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "prices")
 public class Prices {
 	
+	@Id
+	@GeneratedValue
 	public Integer id;
 	
+	@Column(name = "code_product")
 	public String code_product;
 	
+	@Column(name = "description")
 	public String description;
 	
+	@Column(name = "price")
 	public BigDecimal price;
 	
 	
